@@ -1,4 +1,4 @@
-# Konstruktor
+# Sweets
 Next Web builder toolkit
 
 ## What is this about?
@@ -7,11 +7,11 @@ Next Web builder toolkit
 * RESTful API
 * follows [UnionAPI](http://unionapi.org) recomendations
 
-
 ### Directory structure
 
 ```
 bin/
+docs/					<-documents
 lib/  					<-backend
 	api/				
 		validators.js	<-common validators		
@@ -41,7 +41,6 @@ templates/
 conf/ 					<-sample configs for deploying (nginx, db)
 package.json
 README.md
-models.md
 
 ```
 
@@ -58,13 +57,13 @@ when finished must run callback function.
 
 **api resource handlers use resource controllers only, no db layer here**
 
-## Package dependencies
+## Sweets app dependencies
 * apis
-* apis-resource
 * authen
 * units
 * valid
-
+* 
 You choose **db** and **templates**
 
-	
+## Other sweets packages
+* apis-resource
