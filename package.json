@@ -1,0 +1,30 @@
+{
+	"name": "Sweets",
+	"version": "0.0.1",
+	"description": "Sweets web framework",
+	"keywords": ["future", "web", "framework", "sweets"],
+	"author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
+	"contributors": [
+		"Yaroslav Kravchenko <yaroslav@fleve.co>"
+	],
+	"preferGlobal": false,
+	"private": true,
+	"dependencies": {
+		"apis": 	"~0.0.2",
+		"authen": 	"~0.0.1",
+		"units": 	"~0.0.1",
+		"valid": 	"~0.0.2"
+	},
+	"engines": {
+		"node": "~0.10.15"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:velocityzen/konstruktor.git"
+	},
+	"directories": {
+		"lib": "./lib",
+		"bin": "./bin"
+	},
+	"main": "./lib/index"
+}
