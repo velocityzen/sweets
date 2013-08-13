@@ -7,9 +7,7 @@ var create = function () {
 	var units = new UnitSet();
 
 	units.add('contract', new Contract());
-
 	units.add('user', new User());
-
 	return units;
 };
 

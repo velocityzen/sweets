@@ -6,7 +6,6 @@ var Db = require('./db');
 var authUnits = require('./auth/units');
 var apiUnits = require('./api/units');
 var resourcesUnits = require('./resources/units');
-var fs = require('fs');
 
 var App = function (options) {
 	SuperApp.call(this, options);

@@ -43,7 +43,7 @@ User.prototype.validators = {
 };
 
 User.prototype.unitInit = function (units) {
-	this.ctrl = units.require('controllers.user');
+	this.ctrl = units.require('resources.user');
 };
 
 User.prototype.get = function (auth, userData, cb) {

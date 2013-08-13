@@ -6,9 +6,6 @@ var apis = require('apis');
 var resource = apis.resources.res;
 var handlers = apis.handlers;
 var contract = handlers.cont;
-var data = handlers.data;
-var impls = handlers.impls;
-var ret = handlers.ret;
 var st = handlers.st;
 
 var Contract = function () {
