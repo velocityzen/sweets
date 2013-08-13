@@ -13,9 +13,7 @@ var BadRequestError = require('./errors').BadRequestError;
 
 var resultErrHandler = require('./errors').resultErrHandler;
 
-var User = function () {
-	this.db = null;
-};
+var User = function () {};
 inherits(User, Unit);
 
 User.prototype.name = 'user';
