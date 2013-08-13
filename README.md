@@ -59,6 +59,7 @@ when finished must run callback function.
 
 ## Sweets app dependencies
 * apis
+* apis-addresource
 * authen
 * units
 * valid
@@ -66,4 +67,4 @@ when finished must run callback function.
 You choose **db** and **templates**
 
 ## Other sweets packages
-* apis-resource
+
