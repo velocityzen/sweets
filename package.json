@@ -1,5 +1,5 @@
 {
-	"name": "Sweets",
+	"name": "sweets",
 	"version": "0.0.1",
 	"description": "Sweets web framework",
 	"keywords": ["future", "web", "framework", "sweets"],
@@ -8,7 +8,6 @@
 		"Yaroslav Kravchenko <yaroslav@fleve.co>"
 	],
 	"preferGlobal": false,
-	"private": true,
 	"dependencies": {
 		"apis": 	"~0.0.2",
 		"authen": 	"~0.0.1",
