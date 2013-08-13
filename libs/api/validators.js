@@ -8,19 +8,10 @@ var slug = v.rx(/^[-a-z0-9_]{4,60}$/);
 var email = v.rx(/(^[-!#$%&'*+\/=?^_`{}|~0-9A-Z]+(\.[-!#$%&'*+\/=?^_`{}|~0-9A-Z]+)*|^"([\001-\010\013\014\016-\037!#-\[\]-\177]|\\[\001-\011\013\014\016-\177])*")@((?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?$)|\[(25[0-5]|2[0-4]\d|[0-1]?\d?\d)(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}\]$/i);
 var image = v.rx(/^https?:\/\/.*\.(jpe?g|png|gif)$/i);
 
-var moodType = v.oneOf('image', 'video:vimeo');
-var service = v.oneOf('flickr', 'instagram', 'google', 'tumblr');
-
-var perPage = v.v(v.intNum, v.range(1, 100));
-
 module.exports = {
 	domain: domain,
 	url: url,
 	slug: slug,
 	email: email,
 	image: image,
-	service: service,
-
-	moodType: moodType,
-	perPage: perPage
 };
