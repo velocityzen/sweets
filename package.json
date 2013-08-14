@@ -9,6 +9,7 @@
 	],
 	"preferGlobal": false,
 	"dependencies": {
+		"async":	"0.2.7",
 		"apis": 	"~0.0.2",
 		"apis-addresource": "~0.0.1",
 		"authen": 	"~0.0.1",
