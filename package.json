@@ -21,7 +21,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:velocityzen/sweets.git"
+		"url": "git@github.com:swts/sweets.git"
 	},
 	"directories": {
 		"lib": "./lib",
