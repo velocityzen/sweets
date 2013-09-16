@@ -17,7 +17,8 @@
 		"units": 	"~0.0.1",
 		"valid": 	"~0.0.2",
 
-		"nunjucks": 	"~0.1.10"
+		"nunjucks": 	"~0.1.10",
+		"sweets-nougat": 	"~0.0.1"
 	},
 	"engines": {
 		"node": "~0.10.15"

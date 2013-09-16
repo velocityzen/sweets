@@ -7,10 +7,4 @@ Next Web builder toolkit
 * RESTful API
 * follows [UnionAPI](http://unionapi.org) recomendations
 
-## Sweets app dependencies
-* apis
-* apis-resource
-* authen
-* units
-* valid
 
