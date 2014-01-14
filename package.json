@@ -11,11 +11,12 @@
 	"preferGlobal": false,
 	"dependencies": {
 		"async":	"~0.2.7",
-		"apis": 	"~0.0.2",
-		"apis-resource": "~0.0.1",
 		"authen": 	"~0.0.1",
 		"units": 	"~0.0.1",
 		"valid": 	"~0.1.0",
+		"apis": 	"~0.0.2",
+		"apis-resource": "~0.0.1",
+		"apis-return": "~0.0.1",
 		"nunjucks": 	"~1.0.1"
 	},
 	"engines": {
