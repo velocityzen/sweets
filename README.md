@@ -5,6 +5,7 @@ Next Web builder toolkit
 
 * Modular
 * Lightweight
+* Follows [UnionAPI](http://unionapi.org) recommendation
 * Focused on RESTful api creation
 * Auto api routing generation
 * No ORM
@@ -12,7 +13,6 @@ Next Web builder toolkit
 * API testing UI
 * Database independent
 * Builded-in authentication
-* Follows [UnionAPI](http://unionapi.org) recommendation
 * Client [lib](http://github.com/swts/swts) (but you can use your own)
 
 ## Sweets (modules)
