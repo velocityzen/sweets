@@ -13,11 +13,18 @@
 		"async":	"~0.2.7",
 		"authen": 	"~0.0.1",
 		"units": 	"~0.0.1",
+<<<<<<< HEAD
+		"valid": 	"~0.0.2",
+
+		"nunjucks": 	"~0.1.10",
+		"sweets-nougat": 	"~0.0.1"
+=======
 		"valid": 	"~0.1.0",
 		"apis": 	"~0.0.2",
 		"apis-resource": "~0.0.1",
 		"apis-return": "~0.0.1",
 		"nunjucks": 	"~1.0.1"
+>>>>>>> 4db6d32ccd5fe7c410000230d89c0d0477244535
 	},
 	"engines": {
 		"node": "~0.10.15"
