@@ -21,7 +21,7 @@ Sweet is abstraction for one task.
 
 ## Install
 
-Best way to try sweets is to clone [sample app](http://http://github.com/swts/sample-app). and follow instruction from there.
+Best way to try sweets is to clone [sample app](https://github.com/swts/sample). and follow instruction from there.
 
 Also all sweets available through npm.
 
