@@ -36,29 +36,29 @@ For more info look in [units documentation](https://github.com/dimsmol/units)
     bin/sweets command
 
 ####Control sweets in deamon mode:
-*start*
-*stop*
+*start*,
+*stop*,
 *restart*
 
 ####Db operation:
 *db_update_scheme* [sweetname]
-updates db scheme for all application or for one sweet
+— updates db scheme for all application or for one sweet
 
 *db_load_content* [filename]
-load content from content/*.json or from certain file
+— load content from content/*.json or from certain file
 
 ~~*db_drop* [sweetname]
-drops database for all application or for one sweet~~
+— drops database for all application or for one sweet~~
 
 ####User creation:
 *create_user* email password [role]
 
 ####Developing:
 *worker*
-running one instance of app
+— running one instance of app
 
 *console*
-console with loaded app
+— console with loaded app
 
 ## Settings
 *db*
