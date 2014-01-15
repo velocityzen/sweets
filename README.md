@@ -5,6 +5,7 @@ Next Web builder toolkit
 
 * Modular
 * Lightweight
+* Open source
 * Follows [UnionAPI](http://unionapi.org) recommendation
 * Focused on RESTful api creation
 * Auto api routing generation
@@ -17,7 +18,7 @@ Next Web builder toolkit
 
 ## Sweets (modules)
 Sweet is abstraction for one task.
-[Here list of ready to use sweets](http://github.com/swts/sweets/sweets.md)
+[Here list of ready to use sweets](https://github.com/swts/sweets/blob/master/sweets.md)
 
 ## Install
 
@@ -26,11 +27,14 @@ Best way to try sweets is to clone [sample app](https://github.com/swts/sample).
 Also all sweets available through npm.
 
 ## App architecture
+Based on [apis](https://github.com/dimsmol/apis) lib
 ### Units
 For more info look in [units documentation](https://github.com/dimsmol/units)
 ### Contracts
 ### Db
 ### Resource
+### Templates
+We are using great [nunjucks](http://jlongster.github.io/nunjucks/) template engine. The only one that has async templates tags.
 
 ## Usage
     bin/sweets command
