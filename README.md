@@ -26,6 +26,10 @@ Best way to try sweets is to clone [sample app](http://http://github.com/swts/sa
 Also all sweets available through npm.
 
 ## App architecture
+### Units
+For more info look in [units documentation](https://github.com/dimsmol/units)
+### Contracts
+### Db
 ### Resource
 
 ## Usage
@@ -57,18 +61,29 @@ running one instance of app
 console with loaded app
 
 ## Settings
+*db*
+— optional. Object contains sweet to load as db driver and other db settings dependent from db driver. Example:
+```js
+db = {
+    sweet: "nougat",
+    name "dbname"
+}
+```
+Database sweet available as `"db"` unit.
 
 *sweets*
-An array of sweets names that should load on start. All units, resources and contracts will create automatically. 
+— optional. An array of sweets names that should load on start. All units, resources and contracts will be created automatically.
+
+Resources available as `"resources.resourcename"` units.
 
 *staticPath*
-full path to static files dir
+— full path to static files dir
 
 *templatePath*
-full path to templates
+— full path to templates
 
 *roles*
-Optional. An array of roles in descending permissions order.
+— optional. An array of roles in descending permissions order.
 ```js
 roles = ["root", "editor", "user"]
 ```
