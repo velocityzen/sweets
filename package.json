@@ -10,7 +10,7 @@
 	"license" : "GPLv3",
 	"preferGlobal": false,
 	"dependencies": {
-		"async":	"~0.2.7",
+		"async":	"~0.2.9",
 		"authen": 	"~0.0.1",
 		"units": 	"~0.0.1",
 		"valid": 	"~0.1.0",
