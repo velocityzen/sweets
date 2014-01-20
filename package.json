@@ -15,7 +15,7 @@
 		"units": 	"~0.0.1",
 		"valid": 	"~0.1.0",
 		"apis": 	"~0.0.2",
-		"apis-resource": "~0.1.0",
+		"apis-resource": "~0.2.0",
 		"apis-return": "~0.0.1",
 		"nunjucks": 	"~1.0.1"
 	},
