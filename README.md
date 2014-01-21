@@ -38,7 +38,7 @@ For example look into [sample app](https://github.com/swts/sample).
 More documentation will be availeble soon.
 
 ### Db
-Db is optional for sweets app. You can make an app completely without db. But if you need db, you just set sweet db in settings and your db will be available as `db` unit. For example [nougat](https://github.com/swts/nougat) add support for great document based[rethinkdb](http://www.rethinkdb.com).
+Db is optional for sweets app. You can make an app completely without db. But if you need db, you just set sweet db in settings and your db will be available as `db` unit. For example [nougat](https://github.com/swts/nougat) add support for great document based [rethinkdb](http://www.rethinkdb.com).
 
 ### Resource
 [Resource description](https://github.com/swts/sweets/blob/master/resource.md)
@@ -98,7 +98,7 @@ Resources available as `"resources.resourcename"` units.
 **templatePath**
 — full path to templates
 
-**errorsTemplate***
+**errorsTemplate**
 — errors template file name. Precompiled template will be available as `core.template.errors` unit.
 
 **roles**
