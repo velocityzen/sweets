@@ -88,6 +88,9 @@ Resources available as `"resources.resourcename"` units.
 **templatePath**
 — full path to templates
 
+**errorsTemplate***
+— errors template file name
+
 **roles**
 — optional. An array of roles in descending permissions order.
 ```js
