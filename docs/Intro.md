@@ -20,7 +20,7 @@ Next Web builder toolkit
 
 ## Sweets (modules)
 Sweet is abstraction for one task.
-[Here list of ready to use sweets](https://github.com/swts/sweets/blob/master/sweets.md)
+[Here list of ready to use sweets](https://github.com/swts/sweets/blob/master/docs/sweets.md)
 
 ## Install
 
@@ -42,7 +42,7 @@ More documentation will be availeble soon.
 Db is optional for sweets app. You can make an app completely without db. But if you need db, you just set sweet db in settings and your db will be available as `db` unit. For example [nougat](https://github.com/swts/nougat) add support for great document based [rethinkdb](http://www.rethinkdb.com).
 
 ### Resource
-[Resource description](https://github.com/swts/sweets/blob/master/resource.md)
+[Resource description](https://github.com/swts/sweets/blob/master/docs/resource.md)
 
 ### Templates
 We are using great [nunjucks](http://jlongster.github.io/nunjucks/) template engine. The only one that has async templates tags.
