@@ -16,7 +16,7 @@
 		"valid": 	"~0.1.0",
 		"apis": 	"~0.0.2",
 		"apis-resource": "~0.2.0",
-		"apis-return": "~0.0.1",
+		"apis-return": "~0.0.2",
 		"nunjucks": 	"~1.0.1"
 	},
 	"engines": {
