@@ -30,5 +30,8 @@
 		"lib": "./lib",
 		"bin": "./bin"
 	},
-	"main": "./lib/index"
+	"main": "./lib/index",
+	"scripts" :{
+		"postinstall": "ln -s node_modules/apis/bin/apis bin/sweets"
+	}
 }
