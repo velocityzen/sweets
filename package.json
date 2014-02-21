@@ -1,6 +1,6 @@
 {
 	"name": "sweets",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "Sweets — future web framework",
 	"keywords": ["future", "web", "framework", "sweets"],
 	"author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
@@ -15,7 +15,7 @@
 		"units": 	"~0.0.1",
 		"valid": 	"~0.1.0",
 		"apis": 	"~0.0.2",
-		"apis-resource": "~0.2.0",
+		"apis-resource": "~0.3.0",
 		"apis-return": "~0.0.2",
 		"nunjucks": 	"~1.0.1"
 	},
