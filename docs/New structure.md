@@ -22,9 +22,3 @@ roles.js        - roles for api requests. can be omitted
 scheme.js       — resource scheme
 defaults.js     — default settings for resource.
 ```
-
-#To do
-[ ] rewrite settings on per resource basis
-[ ] middlewares
-[ ] views structure
-[ ] better docs
