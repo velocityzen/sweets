@@ -1,22 +1,15 @@
 # Sweets
-Next Web builder toolkit
+Future Web builder toolkit
 
 ## Features
 
 * Focused on RESTful api creation
 * Auto api routing generation
-* Multilanguage support
-* Database independent
+* No ORM
 * Modular
-
-* Open source
 * Lightweight
-* Builded-in authentication with user's roles
-* Client [lib](http://github.com/swts/swts) (but you can use your own)
-* Follows [UnionAPI](http://unionapi.org) recommendation
 * JSON all the time
 * API testing UI
-* No ORM
 
 ## Sweets (modules)
 Sweet is abstraction for one task.

@@ -4,12 +4,13 @@
 
 ```
 resourceName/
-    api.js          //Class for interaction with outer space.
-    controller.js   //Inner space. Resource logic and db interaction.
-    request.js      //Generators of request validators
-    response.js     //Optional. Generators of response validators
-    roles.js        //Optional. Roles for all api requests
-    units.js        //Units generation
+    request.js      - unit, requests validators
+    response.js     — unit, response validators, can be omitted
+    api.js          - unit, api requests handlers
+    controller.js   - unit, resource logic and db interaction
+    roles.js        - roles for api requests. can be omitted
+    scheme.js       — resource scheme
+    defaults.js     — default settings for resource.
 ```
 
 ### request and response

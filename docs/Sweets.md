@@ -8,6 +8,7 @@ Module is abstraction for one task.
 * [fudge](http://github.com/swts/fudge) — Simple in-memory cache
 * [lollipop](http://github.com/swts/lollipop) — User resource
 * [marshmallow](http://github.com/swts/marshmallow) — Tree based structures (menu, categories, etc.)
-* [icecream](http://github.com/swts/icecream)
-* [caramel](http://github.com/swts/caramel) — Sweet that stores and shows different types of content in a proper way
+* [caramel](http://github.com/swts/caramel) — Nodes of content
+* [icecream](http://github.com/swts/icecream) — Ordered nodes (posts, etc.)
+* [marmalade](http://github.com/swts/marmalade) — Unordered nodes
 * [brittle](http://github.com/swts/brittle) — File upload and processing
