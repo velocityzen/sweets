@@ -9,7 +9,6 @@ resourceName/
     api.js          - unit, api requests handlers
     controller.js   - unit, resource logic and db interaction
     roles.js        - roles for api requests. can be omitted
-    scheme.js       — resource scheme
     defaults.js     — default settings for resource.
 ```
 
@@ -140,12 +139,19 @@ var Unit = require('units').Unit;
 
 var User = function () {
     this.db = null;
-    this.box = "users";
 };
 inherits(User, Unit);
 
 User.prototype.unitInit = function (units) {
     this.db = units.require('db');
+};
+
+User.prototype.box = "users";
+User.prototype.scheme = {
+    options: {
+        primaryKey: "id"
+    },
+    indexes: ["email", "displayName"]
 };
 
 User.prototype.get = function(email, exclude, cb) {
@@ -195,8 +201,8 @@ var create = function () {
 
     units.add('controller', new Controller());
     units.add('api', new Api());
-    units.expose('request', request);
-    units.expose('response', response);
+    units.add('request', request);
+    units.add('response', response);
     units.expose('roles', roles);
 
     return units;
