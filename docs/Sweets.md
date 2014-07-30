@@ -11,4 +11,4 @@ Module is abstraction for one task.
 * [caramel](http://github.com/swts/caramel) — Nodes of content
 * [icecream](http://github.com/swts/icecream) — Ordered nodes (posts, etc.)
 * [marmalade](http://github.com/swts/marmalade) — Unordered nodes
-* [brittle](http://github.com/swts/brittle) — File upload and processing
+* [brittle](http://github.com/swts/brittle) — Files upload and processing

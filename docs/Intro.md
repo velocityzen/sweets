@@ -50,32 +50,44 @@ We are using great [nunjucks](http://jlongster.github.io/nunjucks/) template eng
 Nunjucks environment with all tags from other sweets plugged in available as `core.template` unit.
 
 ## Usage
+###Comands
     bin/sweets command
 
-####Control sweets in deamon mode:
+####Commands for control sweets in a deamon mode:
 **start**,
 **stop**,
 **restart**
 
-####Db operation:
-**db_update_scheme** [sweetname]
-— updates db scheme for all application or for one sweet
-
-**db_load_content** [filename]
-— load content from content/*.json or from certain file
-
-**db_drop** [sweetname] 
-— *experimental feature.* drops database for all application or for one sweet
-
-####User creation:
-**create_user** email password [role]
-
-####Developing:
+####Commands useful while developing:
 **worker**
 — running one instance of app
 
 **console**
 — console with loaded app
+
+###Services
+    bin/sweets service command
+
+####Db:
+**db create**
+— creates database.
+
+**db drop**
+— drops database
+
+**db updateScheme** [sweetname]
+— updates db scheme for all application or for one sweet
+
+**db dropScheme** [sweetname]
+— drops db scheme for all application or for one sweet
+
+####Resource
+**resource loadContent** [filename]
+— load content from content/*.json or from certain file
+
+####User:
+**user create** email password [role]
+- creates user
 
 ## Settings
 **db**
@@ -93,11 +105,14 @@ Database sweet available as `"db"` unit.
 
 Resources available as `"resources.resourcename"` units.
 
-**staticPath**
-— full path to static files dir
-
 **templatePath**
 — full path to templates
+
+**mediaPath**
+— full path to media direcory. Usually contains different media files, that don't have to be accessible from the web.
+
+**staticPath**
+— full path to static files dir
 
 **errorsTemplate**
 — errors template file name. Precompiled template will be available as `core.template.errors` unit.
@@ -107,6 +122,8 @@ Resources available as `"resources.resourcename"` units.
 ```js
 roles = ["root", "editor", "user"]
 ```
+
+**You can add your own settings if you needed to. They will be accessible in `core.settings` unit**
 
 ## Auth
 Default sweet auth handler provides simple authentication for user resource. All authentication data saved in auth object in user resource. For authenticate user just call `/auth/user` with data: 

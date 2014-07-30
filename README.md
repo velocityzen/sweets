@@ -3,7 +3,7 @@ Future Web builder toolkit
 
 ## Features
 
-* Focused on RESTful api creation
+* Focused on RESTful api
 * Auto api routing generation
 * No ORM
 * Modular

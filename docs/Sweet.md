@@ -3,7 +3,7 @@
 resources/
     resource1/
     resource2/
-    validators.js — all validators for all resources
+    validators.js — imports all generic and creates all custom validators for all resources
 tags/
     tag1.js
     tag2.js
