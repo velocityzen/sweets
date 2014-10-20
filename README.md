@@ -1,5 +1,5 @@
 # Sweets
-Future Web builder toolkit
+Flexible declarative web framework for real-time projects
 
 ## Features
 
