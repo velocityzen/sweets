@@ -21,5 +21,28 @@ Best way to try sweets is to clone [sample app](https://github.com/swts/sample) 
 
 Also all sweets available through npm.
 
+## Resource
+[Resource docs](https://github.com/swts/sweets/blob/master/docs/Resource.md)
+
+## Services
+Services is a command line interface. You can run services as 
+`bin/sweets service command argument`
+
+Build-in services:
+### db
+*   `create`
+*   `drop`
+*   `updateScheme [resource]`
+*   `dropScheme [resource]`
+*   `rebuildIndexes [resource]`
+
+### resource
+*   `create <resource>`
+*   `loadContent [jsonfilename]`
+
+### user
+*   `create <id> <password> [role]`
+
+
 ## License
 The GPLv3 License, see the included LICENSE.md file.
