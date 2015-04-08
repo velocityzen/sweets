@@ -45,9 +45,7 @@ Db is optional for sweets app. You can make an app completely without db. But if
 [Resource description](https://github.com/swts/sweets/blob/master/docs/resource.md)
 
 ### Templates
-We are using great [nunjucks](http://jlongster.github.io/nunjucks/) template engine. The only one that has async templates tags.
-
-Nunjucks environment with all tags from other sweets plugged in available as `core.template` unit.
+todo
 
 ## Usage
 ###Comands

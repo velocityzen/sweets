@@ -12,3 +12,4 @@ Module is abstraction for one task.
 * [icecream](http://github.com/swts/icecream) — Ordered nodes (posts, etc.)
 * [marmalade](http://github.com/swts/marmalade) — Unordered nodes
 * [brittle](http://github.com/swts/brittle) — Files upload and processing
+* [toffee](http://github.com/swts/toffee) — Nunjucks templates
