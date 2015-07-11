@@ -17,6 +17,7 @@
     "apis-return": "~0.0.2",
     "neo-async": "~0.6.0",
     "authen": "~0.0.1",
+    "uuid5": "~1.0.0",
     "mkdirp": "^0.5.0",
     "queueue": "~0.2.0",
     "sweets-valid": "~0.0.2",
