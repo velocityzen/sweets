@@ -12,10 +12,9 @@
   "license": "GPLv3",
   "preferGlobal": false,
   "dependencies": {
-    "apis": "~0.0.3",
-    "apis-resource": "~0.3.0",
+    "apis": "~0.1.0",
     "apis-return": "~0.0.2",
-    "neo-async": "~0.6.0",
+    "neo-async": "~1.2.0",
     "authen": "~0.0.1",
     "uuid5": "~1.0.0",
     "mkdirp": "^0.5.0",
