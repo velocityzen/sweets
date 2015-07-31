@@ -1,38 +1,33 @@
 {
-  "name": "sweets",
-  "version": "0.6.0",
-  "description": "Sweets — future web framework",
-  "keywords": [
-    "future",
-    "web",
-    "framework",
-    "sweets"
-  ],
-  "author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
-  "license": "GPLv3",
-  "preferGlobal": false,
-  "dependencies": {
-    "apis": "~0.1.0",
-    "apis-return": "~0.0.2",
-    "neo-async": "~1.2.0",
-    "authen": "~0.0.1",
-    "uuid5": "~1.0.0",
-    "mkdirp": "^0.5.0",
-    "queueue": "~0.2.0",
-    "sweets-valid": "~0.0.2",
-    "units": "~0.0.1"
-  },
-  "engines": {
-    "node": "~0.12.0",
-    "iojs": "^1.5.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:swts/sweets.git"
-  },
-  "directories": {
-    "lib": "./lib",
-    "bin": "./bin"
-  },
-  "main": "./lib/index"
+	"name": "sweets",
+	"version": "0.6.0",
+	"description": "Sweets — future web framework",
+	"keywords": [
+		"future",
+		"web",
+		"framework",
+		"sweets"
+	],
+	"author": "Alexey Novikov <v@2dubs.com> (http://2dubs.com)",
+	"license": "MIT",
+	"dependencies": {
+		"apis": "~0.1.0",
+		"apis-return": "~0.0.2",
+		"neo-async": "~1.2.0",
+		"authen": "~0.0.1",
+		"uuid5": "~1.0.0",
+		"mkdirp": "^0.5.0",
+		"queueue": "~0.2.0",
+		"sweets-valid": "~0.0.2",
+		"units": "~0.0.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:swts/sweets.git"
+	},
+	"directories": {
+		"lib": "./lib",
+		"bin": "./bin"
+	},
+	"main": "./lib/index"
 }

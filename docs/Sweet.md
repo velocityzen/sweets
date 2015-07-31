@@ -5,9 +5,9 @@ resources/
     resource2/
     validators.js — imports all generic and creates all custom validators for all resources
 tags/
-    tag1.js
-    tag2.js
-units.js — all resources && tags units
-index.js — export unit set
+    index.js — tags injection unit
+    tag1.js - tag1 class
+    tag2.js - tag2 class
+index.js — all resources && tags units
 ```
 

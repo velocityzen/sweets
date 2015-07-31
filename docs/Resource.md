@@ -1,6 +1,6 @@
 # Sweet resource
 
-**If you don't know yet what is unit, read *[units chapter](http://link to chapt)* first.**
+**If you don't know yet what unit is, read *[units chapter](http://link to chapt)* first.**
 
 ```
 resourceName/
@@ -12,42 +12,83 @@ resourceName/
     defaults.js     — default settings for resource.
 ```
 
-### request and response
-request and response validators generators. Is a simple object with *at least one* request method validator. Response validators are optional, but very useful for testing purposes.
-
-For validators sweets uses most powerful [valid](https://github.com/dimsmol/valid) lib and [sweets-valid](https://github.com/swts/valid) extension.
+### Request and response
+Request and response validators generators. Is a simple unit with *at least one* request method validator. Response validators are optional, but very useful for testing purposes.
 
 **Sweets uses request methods to generate contract. If resource has request with only get and create generators, contract will have only this methods.**
 
+Available methods `get`, `create`, `update`, `del`, `call`
+
+Default authentication requirement for all methods except `get` is "required", for `get` is "optional"
+
+For validators sweets uses most powerful [valid](https://github.com/dimsmol/valid) lib and [sweets-valid](https://github.com/swts/valid) extension.
+
+Simple user validator example:
 ```js
-'use strict';
-var v = require('sweets-valid').validators;
+"use strict";
+let v = require("sweets-valid");
 
-module.exports = {
-    get: function(settings) {
-        return v.opt({
-            email: v.email,
-        });
-    },
-
-    create: function(settings) {
-        var roles = settings.roles,
-            validator = {
-                email: v.email,
-                password: v.str
-            };
-
-        //if we have roles array in settings we need to add roles validator in create request
-        if(roles) {
-            var rolesValidator = v.oneOf.apply(null, roles);
-            validator.roles = v.opt(rolesValidator);
-        }
-
-        return validator;
-    }
+let Request = function () {
+    //do something here
 };
 
+Request.prototype.unitInit = function(units) {
+    this.roles = units.require("core.settings").roles;
+};
+
+Request.prototype.auth = {
+    create: "none"
+};
+
+Request.prototype.get = function() {
+    return { id: v.uuid };
+};
+
+Request.prototype.create = function() {
+    let validator = {
+            email: v.email,
+            password: v.str,
+            name: v.opt(v.str)
+        };
+
+    if(this.roles) {
+        validator.role = v.opt(v.oneOf.apply(null, this.roles));
+    }
+
+    return validator;
+};
+
+Request.prototype.update = function() {
+    let validator = {
+            to: {
+                name: v.opt(v.str),
+                password: v.opt(v.str)
+            }
+        };
+
+    if(this.roles) {
+        validator.to.role = v.opt(v.oneOf.apply(null, this.roles));
+    }
+
+    return validator;
+};
+
+Request.prototype.del = function() {
+    return { id: v.uuid };
+};
+
+module.exports = Request;
 ```
+
+Also for request unit you can define auth object with method properies to change default authentication in the resource contract:
+
+```js
+request.auth = {
+    create: "none",
+    del: "required"
+}
+```
+
 
 ### api
 Api is a unit class for interaction with outer space. 
@@ -79,7 +120,7 @@ var User = function () {
 };
 inherits(User, Unit);
 
-//resource name. We will learn about it later.
+//resource name.
 User.prototype.name = 'user';
 
 User.prototype.unitInit = function (units) {
@@ -146,11 +187,9 @@ User.prototype.unitInit = function (units) {
     this.db = units.require('db');
 };
 
+//db table name and scheme
 User.prototype.box = "users";
 User.prototype.scheme = {
-    options: {
-        primaryKey: "id"
-    },
     indexes: ["email", "displayName"]
 };
 
@@ -174,14 +213,7 @@ module.exports = User;
 ```
 
 ### roles
-Optional. Roles for api requests
-
-```js
-module.exports = {
-    create: "editor",
-    del: "editor"
-};
-```
+Optional. Deprecated for now, work in process
 
 ### untis
 Resource units
