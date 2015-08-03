@@ -49,12 +49,12 @@ More documentation will be availeble soon.
 ### Database
 Db is optional for sweets app. You can make an app completely without db. But if you need db, you just set sweet db in settings and your db will be available as `db` unit. For example [nougat](https://github.com/swts/nougat) add support for great document based [rethinkdb](http://www.rethinkdb.com).
 
-## Environment
+## Settings && environments
 You can define environment as:
-* `SWEETS_ENV` environment variable
-* `--env=dev` cli option
+* `APIS_ENV` environment variable
+* `--env=<name>` cli option
 
-if sweets found any environment defined it will try to load a `environment.js` file from settings directory. Simple example of `dev.js`
+if sweets found any environment defined it will try to load a `environment.js` file from settings directory. Simple example: `--env=dev` loads `dev.js`
 
 ```js
 "use strict";
