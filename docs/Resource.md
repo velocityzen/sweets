@@ -1,6 +1,6 @@
 # Sweet resource
 
-**If you don't know yet what unit is, read *[units chapter](http://link to chapt)* first.**
+**If you don't know what a unit is, read *[units chapter](http://link to chapt)* first.**
 
 ```
 resourceName/
@@ -13,15 +13,15 @@ resourceName/
 ```
 
 ### Request and response
-Request and response validators generators. Is a simple unit with *at least one* request method validator. Response validators are optional, but very useful for testing purposes.
+Request and response validators generators is a simple unit with *at least one*request method validator. Response validators are optional but very useful for testing purposes.
 
-**Sweets uses request methods to generate contract. If resource has request with only get and create generators, contract will have only this methods.**
+**Sweets uses request methods to generate a contract. If a resource has a request with only `get` and `create` generators, the contract will have only those methods.**
 
-Available methods `get`, `create`, `update`, `del`, `call`
+Available methods: `get`, `create`, `update`, `del`, `call`
 
-Default authentication requirement for all methods except `get` is "required", for `get` is "optional"
+Default authentication requirement for all methods is "required" except `get`. For `get` the authentication is "optional".
 
-For validators sweets uses most powerful [valid](https://github.com/dimsmol/valid) lib and [sweets-valid](https://github.com/swts/valid) extension.
+For validators Sweets uses the most powerful [valid](https://github.com/dimsmol/valid) lib and [sweets-valid](https://github.com/swts/valid) extension.
 
 Simple user validator example:
 ```js
@@ -80,7 +80,7 @@ Request.prototype.del = function() {
 module.exports = Request;
 ```
 
-Also for request unit you can define auth object with method properies to change default authentication in the resource contract:
+For `request` unit you can also define an auth object with `methods` properties to change the default authentication in the resource contract:
 
 ```js
 request.auth = {
@@ -93,11 +93,11 @@ request.auth = {
 ### api
 Api is a unit class for interaction with outer space. 
 
-* **No db interaction here.** Api uses only controllers' methods.
-* Return conforming http error codes if error is occurred. There is easy to use error handler from [apis-return](https://github.com/velocityzen/apis-return) module.
+* **No db interaction here.** Api uses only controllers methods.
+* Api returns conforming http error codes if error occurs. There is an easy-to-use error handler from [apis-return](https://github.com/velocityzen/apis-return) module.
 
 ####Properties and methods:
-`name` — name of the resource. Ex. `"user"`, `"blog/post"`. Resource api will be avalible under this name `"/api/1/user"` and `"api/1/blog/post"`.
+`name` — resource name. Ex. `"user"`, `"blog/post"`. Resource api will be available under this name `"/api/1/user"` and `"api/1/blog/post"`.
 
 `get`, `create`, `update`, `del` — methods for handling various types of requests.
 
@@ -114,8 +114,6 @@ var Conflict = errors.Conflict;
 var returnHandler = errors.handler;
 
 var User = function () {
-    //on instance creation we don't have access 
-    //to controlller or any other unit
     this.ctrl = undefined;
 };
 inherits(User, Unit);
@@ -124,19 +122,18 @@ inherits(User, Unit);
 User.prototype.name = 'user';
 
 User.prototype.unitInit = function (units) {
-    //This is the best way to get access to resource controller
     this.ctrl = units.require('controller');
 };
 
 User.prototype.get = function (auth, requestData, cb) {
     if(requestData) {
-        //if we have request with email return user profile or 404 error
+        //if there is a request with email, return the user profile or 404 error
         this.ctrl.get(requestData.email, returnHandler("NotFound", "user", cb));
     } else if(!auth) {
-        //if we have empty request and no auth identity return 403 error
+        //if there is an empty request and no auth identity, return the 403 error
         cb(new Forbidden());
     } else {
-        //and final if we have empty request but have auth.identity we return authenticated user profile or 400 error if this user doesn't exist
+        //finaly, if there is an empty request but there is an auth.identity, return the authenticated user profile or 400 error if that user doesn't exist
         this.ctrl.get(auth.identity.email, returnHandler("BadRequest", "user", cb));
     }
 };
@@ -146,7 +143,7 @@ User.prototype.create = function (auth, requestData, cb) {
 
     this.ctrl.create(requestData, function(err, result) {
         if(err) {
-            //Error code 2 means dublicate record (we already have user with this email registered)
+            //Error code 2 means a dublicate record (there is a user with the same email)
             if(err.code === 2) {
                 cb(new Conflict());
             } else {
@@ -170,8 +167,7 @@ module.exports = User;
 ```
 
 ### controller
-
-Controller is a unit class for resource logic. Inner space of resource.
+Controller is a unit class for a resource logic. Inner space of a resource.
 
 ```js
 "use strict";
@@ -213,7 +209,7 @@ module.exports = User;
 ```
 
 ### roles
-Optional. Deprecated for now, work in process
+Deprecated for now, work in process
 
 ### untis
 Resource units
@@ -226,7 +222,6 @@ var Controller = require("./controller");
 var Api = require("./api");
 var request = require("./request");
 var response = require("./response");
-var roles = require("./roles");
 
 module.exports = function () {
     var units = new UnitSet();
@@ -235,7 +230,6 @@ module.exports = function () {
     units.add("api", new Api());
     units.add("request", request);
     units.add("response", response);
-    units.expose("roles", roles);
 
     return units;
 };
