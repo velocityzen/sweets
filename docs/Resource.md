@@ -8,7 +8,6 @@ resourceName/
     response.js     — unit, response validators, can be omitted
     api.js          - unit, api requests handlers
     controller.js   - unit, resource logic and db interaction
-    roles.js        - roles for api requests. can be omitted
     defaults.js     — default settings for resource.
 ```
 
@@ -32,9 +31,7 @@ let Request = function () {
     //do something here
 };
 
-Request.prototype.unitInit = function(units) {
-    this.roles = units.require("core.settings").roles;
-};
+Request.prototype.unitInit = function(units) {};
 
 Request.prototype.auth = {
     create: "none"
@@ -45,32 +42,20 @@ Request.prototype.get = function() {
 };
 
 Request.prototype.create = function() {
-    let validator = {
-            email: v.email,
-            password: v.str,
-            name: v.opt(v.str)
-        };
-
-    if(this.roles) {
-        validator.role = v.opt(v.oneOf.apply(null, this.roles));
-    }
-
-    return validator;
+    return {
+        email: v.email,
+        password: v.str,
+        name: v.opt(v.str)
+    };
 };
 
 Request.prototype.update = function() {
-    let validator = {
-            to: {
-                name: v.opt(v.str),
-                password: v.opt(v.str)
-            }
-        };
-
-    if(this.roles) {
-        validator.to.role = v.opt(v.oneOf.apply(null, this.roles));
-    }
-
-    return validator;
+    return {
+        to: {
+            name: v.opt(v.str),
+            password: v.opt(v.str)
+        }
+    };
 };
 
 Request.prototype.del = function() {
@@ -207,9 +192,6 @@ User.prototype.remove = function (email, cb) { /*...*/ };
 module.exports = User;
 
 ```
-
-### roles
-Deprecated for now, work in process
 
 ### untis
 Resource units

@@ -71,7 +71,7 @@ A sweet is an abstraction for one task.
 [Resource docs](https://github.com/swts/sweets/blob/master/docs/Resource.md)
 
 ## Services
-Services is a command line interface. You can run services as 
+Services is a command line interface. You can run services as
 `bin/sweets service command argument`
 
 ### Build-in services:
@@ -84,12 +84,12 @@ Services is a command line interface. You can run services as
 
 #### resource
 *   `create <resource>` — creates a new resource in the `lib/resources` folder
-*   `loadContent [jsonfilename]` — loads the content from all json files in the data folder or from a file.
+*   `loadContent [jsonfilename]` — loads the content from all json files in the data folder except files begin with '_' underscore, or from a file.
 
 #### user
-*   `create <id> <password> [role]` — creates a user with `id` and `password`. For default `sweets` auth provider `id` is an email.
+*   `create <id> <password>` — creates a user with `id` and `password`. For default `sweets` auth provider `id` is an email.
 
-#### service 
+#### service
 *   `create <name>` — creates custom service. For details see **Custom services**.
 
 ### Custom services
