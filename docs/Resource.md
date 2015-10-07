@@ -76,7 +76,7 @@ request.auth = {
 
 
 ### api
-Api is a unit class for interaction with outer space. 
+Api is a unit class for interaction with outer space.
 
 * **No db interaction here.** Api uses only controllers methods.
 * Api returns conforming http error codes if error occurs. There is an easy-to-use error handler from [apis-return](https://github.com/velocityzen/apis-return) module.
@@ -119,7 +119,7 @@ User.prototype.get = function (auth, requestData, cb) {
         cb(new Forbidden());
     } else {
         //finaly, if there is an empty request but there is an auth.identity, return the authenticated user profile or 400 error if that user doesn't exist
-        this.ctrl.get(auth.identity.email, returnHandler("BadRequest", "user", cb));
+        this.ctrl.get(auth.identity, returnHandler("BadRequest", "user", cb));
     }
 };
 
