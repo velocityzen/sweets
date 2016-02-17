@@ -13,10 +13,7 @@ logs
 results
 
 npm-debug.log
-
-lib/settings/settings_local.js
-src/js/config_local.js
 static/js/
 static/css/
 .DS_Store
-node_modules/
+node_modules

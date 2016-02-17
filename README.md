@@ -3,11 +3,11 @@ Flexible declarative web framework for real-time projects
 
 ## Features
 
-* Focused on RESTful api
-* Auto api routing generation
+* Focused on realtime RPC and events
+* Declarative api
 * No ORM
 * Modular
-* Fast and lightweight (startup time ~300ms)
+* Fast and lightweight (startup time ~500ms)
 * JSON all the time
 
 ## Install
@@ -34,13 +34,13 @@ All Sweets modules are also available through npm.
 **console** — starts the console with the loaded app
 
 ## App architecture
-Based on [apis](https://github.com/velocityzen/apis) lib
+Based on [matter-in-motion](https://github.com/velocityzen/matter-in-mottion) lib
 
 ### Units
 For more info look into [units documentation](https://github.com/dimsmol/units)
 
 ### Contracts
-Contracts are for routing. But unlike the other frameworks contracts and routes they validate the incoming data. They also can validate *outcoming* data. All resources contracts are generated once at the app start.
+Contracts are for routing. They are fully compatible with expressjs.
 
 For example, look into [sample app](https://github.com/swts/sample).
 More documentation will be available soon.
@@ -50,7 +50,7 @@ Database is optional for the Sweets app. You can create an app completely withou
 
 ## Settings and Environments
 You can define environment as:
-* `APIS_ENV` environment variable
+* `MM_ENV` environment variable
 * `--env=<name>` cli option
 
 if the Sweets App finds any environment defined, it will try to load a `environment.js` file from the settings directory. For example, `--env=dev` loads `dev.js`:
@@ -96,8 +96,12 @@ Services is a command line interface. You can run services as
 To create a new service use the `service create <name>` service command. It makes *services/name.js* file. This is a simple class and every method can be run as `bin/sweets servicename methodname arg1 arg2 ...`. All methods get a callback as the last argument. Run this callback when the service is finished.
 To make a service available for cli add it in the loader of your app:
 ```js
-var Loader = function (options) {
-    SweetsLoader.call(this, options, ["your_service_name", "another_custom_service"]);
+let Loader = function (options) {
+    SweetsLoader.call(this, options);
+    this.addServices([
+      'nougat.db',
+      'lollipop.user'
+    ]);
 };
 ```
 
