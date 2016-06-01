@@ -34,10 +34,10 @@ All Sweets modules are also available through npm.
 **console** — starts the console with the loaded app
 
 ## App architecture
-Based on [matter-in-motion](https://github.com/velocityzen/matter-in-mottion) lib
+Based on [matter-in-motion](https://github.com/velocityzen/matter-in-motion) lib
 
 ### Units
-For more info look into [units documentation](https://github.com/dimsmol/units)
+For more info look into [units documentation](https://github.com/velocityzen/units)
 
 ### Contracts
 Contracts are for routing. They are fully compatible with expressjs.
